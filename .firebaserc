@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "data-data-dc0a2": {
+      "hosting": {
+        "projectUAS": [
+          "data-data-dc0a2"
+        ]
+      }
+    },
+    "data-karyawan-toko": {
+      "hosting": {
+        "projectUAS": [
+          "data-karyawan-toko"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<div *ngIf="loading" style="height: 300px;" class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-spinner></mat-spinner>
+</div>
+
+<mat-card *ngIf='!loading'>
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class='uk-flex'>
+            <span class="uk-width-expand"></span>
+            <button mat-flat-button color="primary" (click)="EmployeeDetail({},-1)">Tambah</button>
+        </div>
+        <br>
+        <table class="uk-table uk-table-middle uk-table-divider">
+            <thead>
+                <th>No</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Religion</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th align="right"></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees; let idx=index">
+                    <td>{{idx+1}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.address}}</td>
+                    <td>{{employee.age}}</td>
+                    <td>{{employee.religion}}</td>
+                    <td>{{employee.birthday}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.phone}}</td>
+                    <td align="right">
+                        <button mat-button color="primary" (click)="EmployeeDetail(employee,idx)">Edit</button>
+                        <button mat-button color="accent" (click)="DeleteEmployee(employee.id, idx)"[disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Menghapus..':'Delete'}}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

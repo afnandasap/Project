@@ -1,0 +1,14 @@
+<div class="login">
+    <h1><u>Login</u></h1>
+      
+      <mat-label style="color: aliceblue;">Email</mat-label>
+      <input matInput placeholder="Ex. email@domain.com" [(ngModel)]="user.email">
+      <mat-label style="color: aliceblue;">Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" placeholder="Your password" [(ngModel)]="user.password" required>
+      <button mat-raised-button color="primary" (click)="login(user)">LOGIN</button>
+      <div class="uk-flex uk-flex-right">
+        <div class="uk-width-expand">
+          <button mat-button routerLink="/register">Create Account</button>
+          
+        </div>
+  </div>

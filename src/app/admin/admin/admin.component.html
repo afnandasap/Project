@@ -1,0 +1,28 @@
+<ng-container>
+    <button mat-icon-button (click)="sidenav.toggle()"></button>
+    <div class="uk-width-expand"></div>
+    <button mat-button routerLink="/admin/dashboard"><u>DASHBOARD</u></button>
+    <button mat-button routerLink="/admin/employee"><u>BERKAS</u></button>
+    <button style="margin-left: 85%;" mat-button (click)="logout()"><u>LOGOUT</u></button>
+    
+    <mat-sidenav-container class="example-container">
+    
+      <mat-sidenav #sidenav 
+      mode="side" 
+      [position]="'start'" 
+      opened class="sidenav-left"
+      [fixedInViewport]="true" 
+      [fixedTopGap]="65"
+      [fixedBottomGap]="0">
+     </mat-sidenav>
+    <mat-sidenav-content style="padding: 20px; background-color: #ECEFF1;">
+    
+   
+<router-outlet></router-outlet>
+    
+    
+    
+    </mat-sidenav-content>
+    <!--end sidenav content-->
+    </mat-sidenav-container>   
+    </ng-container>
