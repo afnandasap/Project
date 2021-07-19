@@ -16,6 +16,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -29,11 +30,13 @@ import { environment } from '../environments/environment';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
+  
     
  
   ],
@@ -46,6 +49,7 @@ import { environment } from '../environments/environment';
     MatToolbarModule,
     MatCardModule,
     HttpClientModule,
+    MatDatepickerModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
  

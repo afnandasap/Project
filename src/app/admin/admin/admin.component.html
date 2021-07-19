@@ -1,28 +1,19 @@
 <ng-container>
-    <button mat-icon-button (click)="sidenav.toggle()"></button>
-    <div class="uk-width-expand"></div>
-    <button mat-button routerLink="/admin/dashboard"><u>DASHBOARD</u></button>
-    <button mat-button routerLink="/admin/employee"><u>BERKAS</u></button>
-    <button style="margin-left: 85%;" mat-button (click)="logout()"><u>LOGOUT</u></button>
-    
-    <mat-sidenav-container class="example-container">
-    
-      <mat-sidenav #sidenav 
-      mode="side" 
-      [position]="'start'" 
-      opened class="sidenav-left"
-      [fixedInViewport]="true" 
-      [fixedTopGap]="65"
-      [fixedBottomGap]="0">
-     </mat-sidenav>
-    <mat-sidenav-content style="padding: 20px; background-color: #ECEFF1;">
-    
-   
+    <div class='header'>
+        <div class='logo'>
+            <h1 style="margin-top: 20px; margin-left: 15px; font-size: 20px;">TOKOKU</h1>
+        </div>
+
+        <div class='navbar'>
+            <ul>
+                <button mat-button style="font-size: 18px;" [matMenuTriggerFor]="menu">MENU TOKO</button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item style="background-color: rgb(243, 243, 243); color: rgb(0, 0, 0);" routerLink="/admin/employee">KARYAWAN</button>
+                        <button mat-menu-item style="background-color: rgb(243, 243, 243); color :rgb(0, 0, 0);" routerLink="/admin/dashboard">DASHBOARD</button>
+                        <button mat-menu-item style="background-color: rgb(243, 243, 243); color: rgb(0, 0, 0);" (click)="logout()">LOGOUT</button>
+                </mat-menu>
+            </ul>
+        </div>
+    </div>    
 <router-outlet></router-outlet>
-    
-    
-    
-    </mat-sidenav-content>
-    <!--end sidenav content-->
-    </mat-sidenav-container>   
     </ng-container>

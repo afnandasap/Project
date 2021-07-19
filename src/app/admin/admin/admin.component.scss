@@ -1,0 +1,16 @@
+.body {margin: 0; font-family: sans-serif;}
+
+.header {color: rgb(0, 0, 0); background-color: rgb(243, 243, 243); height: 70px;}
+
+.logo {float: left; margin-right: 1%;}
+
+.navbar {float: right;margin-left: -1%}
+
+.navbar ul{list-style: none; padding-top: 18px;}
+
+.navbar ul li{display: inline; margin: 10px;}
+
+.navbar ul li a{text-decoration: none; color: white; }
+
+.navbar ul li a:hover {border-bottom: 2px solid white;}
+

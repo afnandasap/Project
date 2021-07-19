@@ -22,7 +22,7 @@ export class EmployeeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.title='Employees';
+    this.title='Karyawan';
     this.auth.user.subscribe(user=>{
       this.userData = user;
       this.getEmployees();
@@ -56,7 +56,6 @@ export class EmployeeComponent implements OnInit {
         });
       }
 
-
       loadingDelete:any={};
       DeleteEmployee(id: any,idx: any)
       {
@@ -72,7 +71,7 @@ export class EmployeeComponent implements OnInit {
           });
         }
       }
-      
     }
+
 
 

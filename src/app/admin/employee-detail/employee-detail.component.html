@@ -4,32 +4,34 @@
 <div mat-dialog-content>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Name</mat-label>
-        <input matInput [(ngModel)]="data.name">
+        <input matInput placeholder="Ex. Afnanda Saputra" [(ngModel)]="data.name">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Address</mat-label>
-        <input matInput [(ngModel)]="data.address">
+        <input matInput placeholder="Ex. Yogyakarta" [(ngModel)]="data.address">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Age</mat-label>
-        <input matInput [(ngModel)]="data.age">
+        <input matInput placeholder="Ex. 19 tahun" [(ngModel)]="data.age">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Religion</mat-label>
-        <input matInput [(ngModel)]="data.religion">
+        <input matInput placeholder="Ex. Islam" [(ngModel)]="data.religion">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Birthday</mat-label>
-        <input matInput [(ngModel)]="data.birthday">
+        <input matInput placeholder="Ex. 03 september 2001" [(ngModel)]="data.birthday">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Gender</mat-label>
-        <input matInput [(ngModel)]="data.gender">
+        <input matInput placeholder="Ex. Laki-laki" [(ngModel)]="data.gender">
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Phone</mat-label>
-        <input matInput [(ngModel)]="data.phone">
+        <input matInput placeholder="Ex. 0821xxxxxxxx" [(ngModel)]="data.phone">
     </mat-form-field>
+
+
 </div>
 <div mat-dialog-action align="end">
 <button mat-button mat-dialog-close>Batal</button>
