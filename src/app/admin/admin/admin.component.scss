@@ -4,7 +4,7 @@
 
 .logo {float: left; margin-right: 1%;}
 
-.navbar {float: right;margin-left: -1%}
+.navbar {float: right;margin-left: -1%; margin-top: 17px;}
 
 .navbar ul{list-style: none; padding-top: 18px;}
 
@@ -14,3 +14,30 @@
 
 .navbar ul li a:hover {border-bottom: 2px solid white;}
 
+body {
+    background: #ecf3f3;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 100%;
+}
+
+@for $i from 1 through 30 {
+  @keyframes particle-animation-#{$i} {
+    100% {
+      transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+    }
+  }
+  
+  .particle:nth-child(#{$i}){
+    animation: particle-animation-#{$i} 10s infinite;
+    $size: random(5) + 5 + px;
+    opacity: random(100)/100;
+    height: $size;
+    width: $size;
+    animation-delay: -$i * .2s;
+    transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+    background: hsl(random(360), 70%, 50%);
+  }
+}
