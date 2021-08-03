@@ -1,0 +1,102 @@
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+
+<nav style="background-color: #212121; padding: 13px; margin-bottom: 0%;" class="navbar navbar-light bg-light">
+    <div style="text-align: center;" class="container-fluid"> 
+        
+        <button mat-button style="background-color: #212121; color: rgb(255, 255, 255)" routerLink="/profile">PROFIL</button>
+        <button mat-button style="background-color: #212121; color: rgb(255, 255, 255);" routerLink="/list">DAFTAR HARGA</button>
+        <button mat-button style="background-color: #212121; color: rgb(255, 255, 255)" routerLink="/shopping">PRODUK</button>
+        <button mat-button style="background-color: #212121; color: rgb(33, 218, 0)" routerLink="/login">LOGIN</button>
+        <button mat-button style="background-color: #212121; color: rgb(33, 218, 0)" routerLink="/register">REGISTER</button>
+     </div>
+    
+  </nav>
+
+
+
+
+   
+
+
+
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar">
+                        <a style="font-size: 17px; margin-top: 10px;" routerLink="/list">Vektor Art</a>
+                    </li>
+                    <li>
+                        <a style="font-size: 17px; margin-top: 10px;" routerLink="/logo">Logo</a>
+                    </li>
+                    
+                 
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+      
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                         
+                            
+                        
+                            <div *ngIf="loading" style="height: 300px;" class="uk-flex uk-flex-center uk-flex-middle"> 
+                                <mat-spinner color="accent" diameter="70"></mat-spinner></div>
+                               
+                            
+                            
+                            
+                            <mat-card *ngIf='!loading'>
+                                <mat-card-header>
+                                    <mat-card-title>{{title}}</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                            
+                            
+                                    <br>
+                                    <table class="uk-flex">
+                                        <thead>
+                                            <th>No</th>
+                                            <th>Nama Produk</th>
+                                            <th>Ukuran</th>
+                                            <th>Jumlah</th>
+                                            <th>Kertas</th>
+                                            <th>Bingkai</th>
+                                            <th>Lama Pengerjaan</th>
+                                            <th>Harga</th>
+                                            <th align="right"></th>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let employee of employees; let idx=index">
+                                                <td>{{idx+1}}</td>
+                                                <td>{{employee.name}}</td>
+                                                <td>{{employee.size}}</td>
+                                                <td>{{employee.jumlah}}</td>
+                                                <td>{{employee.paper}}</td>
+                                                <td>{{employee.bingkai}}</td>
+                                                <td>{{employee.time}}</td>
+                                                <td>{{employee.price}}</td>
+                                                <td>{{employee.gender}}</td>
+                                                <td align="right">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </mat-card-content>
+                      </mat-card>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+     

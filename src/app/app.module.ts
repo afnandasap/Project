@@ -23,9 +23,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-
-
-
+import { ShoppingComponent } from './shop/shopping/shopping.component';
+import { ListComponent } from './shop/list/list.component';
+import { ProfileComponent } from './shop/profile/profile.component';
+import { LogoComponent } from './shop/logo/logo.component';
+import { LogoArtComponent } from './shop/logo-art/logo-art.component';
 
 
 
@@ -36,6 +38,14 @@ import { environment } from '../environments/environment';
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    ShoppingComponent,
+    ListComponent,
+    ProfileComponent,
+    LogoComponent,
+    LogoArtComponent,
+
+  
+  
   
     
  

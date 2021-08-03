@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@angular/material/theming';
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -11,8 +12,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$candy-app-primary: mat-palette($mat-green);
-$candy-app-accent:  mat-palette($mat-red,500);
+$candy-app-primary: mat-palette($mat-gray,900);
+$candy-app-accent:  mat-palette($mat-green,500);
 
 // The warn palette is optional (defaults to red).
 $candy-app-warn:    mat-palette($mat-red);
@@ -26,9 +27,10 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 @include angular-material-theme($candy-app-theme);
 
 //memakai uikit untuk memanfaatkan flex, grid, widht, dan height.
-@import './styles1.css';
 @import './foundation.css';
-html, body { height: 100%;  background-image: url('https://cdn.pixabay.com/photo/2016/11/30/12/29/bicycle-1872682_960_720.jpg');}
+@import './styles1.css';
+
+html, body { height: 100%; background-color: white}
 body{ margin: 0; 
     padding: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -40,7 +42,23 @@ body{ margin: 0;
   
 }
     
-   
+
+    
+
 .spacer{
     flex-grow: 1;
+}
+
+#maincontent{
+    width: auto;
+    float: none;
+}
+#sidebar{
+    width: auto;
+    float: none;
+}
+
+.container {
+   width: 100%;
+   min-height: 200px;
 }

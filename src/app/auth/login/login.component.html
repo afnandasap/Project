@@ -1,3 +1,20 @@
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+<nav style="background-color: #212121; padding: 16px; margin-bottom: 0%;" class="navbar navbar-light bg-light">
+  <div style="text-align: center;" class="container-fluid">
+
+   <a routerLink="/shopping" style="color: white; float: right;">Produk</a> <mat-icon style="margin-bottom: 5px; float: right; cursor: pointer; margin-right: 15px; color: #ffffff;" routerLink="/shopping">shop</mat-icon>
+  </div>
+</nav>
+
+
+
+
+
+
 <div id="particle-container">
   <div class="particle"></div>
   <div class="particle"></div>
@@ -29,22 +46,63 @@
   <div class="particle"></div>
   <div class="particle"></div>
   <div class="particle"></div>
-  
 </div>
 
 
-<div class="login">
-    <h1 style="color: aliceblue;"><u>Login</u></h1>
-      
-      <mat-label style="color:aliceblue">Email</mat-label>
-      <input matInput placeholder="Ex. Afnandasap@gmail.com" [(ngModel)]="user.email">
-      <br><br>
-      <mat-label style="color: aliceblue">Password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" placeholder="Your password" [(ngModel)]="user.password" required>
-      <button style="color: aliceblue;" mat-raised-button color="primary" (click)="login(user)">LOGIN</button>
-      <div class="uk-flex uk-flex-right">
-        <div class="uk-width-expand">
-          <button style="color: aliceblue;" mat-button routerLink="/register">Create Account</button>
+
+
+
+
+
+  <body>
+    
+    <div class="limiter">
+      <div style="margin-top: 0%;" class="container-login100">
+        <div class="wrap-login100">
+  
+          <div style="margin-top: 0%;" class="login100-form ">
+            <img src="https://i.pinimg.com/originals/8c/f8/38/8cf8381763ce5a3a556c4712c4fcade1.jpg" alt="Image" class="img-fluid">
+          </div>
+  
+          <div style="margin-top: 0%;" class="login100-form ">
+            <span class="login100-form-title">
+              Login
+            </span>
+  
+             <input class="input100" type="text" name="email" placeholder="Ex. Afnandasap@gmail.com" [(ngModel)]="user.email" required>>
+            <input class="input100" matInput [type]="hide ? 'password' : 'text'" placeholder="Your password" [(ngModel)]="user.password" required>
           
+              <button class="login100-form-btn">
+              <button (click)="login(user)">LOGIN</button>
+              </button>
+          
+            <div class="text-center p-t-12">
+              <a class="txt2" routerLink="/register">
+               Create account
+              </a>
+            </div>
+  
+          
+          </div>
         </div>
-  </div>
+      </div>
+    </div>
+    
+  <!--===============================================================================================-->	
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script >
+      $('.js-tilt').tilt({
+        scale: 1.1
+      })
+    </script>
+  <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+  
+  

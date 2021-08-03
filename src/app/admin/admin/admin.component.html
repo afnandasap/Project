@@ -1,49 +1,21 @@
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
 <ng-container>
-    <div class='header'>
-        <div class='logo'>
-            <h1 style="margin-top: 20px; margin-left: 15px; font-size: 20px;">TOKOKU</h1>
-        </div>
-
-        <div class='navbar'>
-                        <button mat-button style="background-color: rgb(243, 243, 243); color :rgb(0, 0, 0);" routerLink="/admin/dashboard">DASHBOARD</button>
-                        <button mat-button style="background-color: rgb(243, 243, 243); color: rgb(0, 0, 0);" routerLink="/admin/employee">KARYAWAN</button>
-                        <button mat-button style="background-color: rgb(243, 243, 243); color: rgb(0, 0, 0);" (click)="logout()">LOGOUT</button>   
-        </div>
-    </div>    
-    <div id="particle-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        
+  <mat-toolbar color="primary">
+    <div style="text-align: center;" class="container-fluid"> 
+    <button mat-button style="background-color: #212121; color: rgb(255, 255, 255);" routerLink="admin/employee">DAFTAR HARGA</button>
+      <span class="example-spacer"></span>
+      <button mat-button style="margin-left: 10px; color: rgb(255, 69, 69);" (click)="logout()"> KELUAR</button>
       </div>
-<router-outlet></router-outlet>
-
-    </ng-container>
+    </mat-toolbar>
+    
    
+<router-outlet></router-outlet>
+</ng-container>
+
+
+      

@@ -1,0 +1,45 @@
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar">
+                        <a style="font-size: 17px; margin-top: 10px;" routerLink="/admin/employee">Vektor Art</a>
+                    </li>
+                    <li class="sidebar">
+                        <a style="font-size: 17px; margin-top: 10px;" routerLink="/admin/logo">Logo</a>
+                    </li>
+              
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+      
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                       
+                            
+                        
+                            <div *ngIf="loading" style="height: 300px;" class="uk-flex uk-flex-center uk-flex-middle"> 
+                                <mat-spinner color="accent" diameter="70"></mat-spinner></div>
+                               
+                            
+                            
+                            
+                            <mat-card *ngIf='!loading'>
+                                <mat-card-header>
+                                    <mat-card-title>{{title}}</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                            
+                            
+                                    <br>
+                            <h1 style="margin-left: 15px;">coming soon!</h1>
+                      
+          
+           
+            <!-- /#page-content-wrapper -->
+  

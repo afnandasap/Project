@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
-import { EmployeeComponent } from './employee/employee.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { ImageComponent } from './image/image.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ProfilComponent } from './profil/profil.component';
+import { LogoComponent } from './logo/logo.component';
+
 
 const routes: Routes = [
   {
@@ -18,14 +21,15 @@ const routes: Routes = [
         component:EmployeeComponent
       },
       {
-        path:'dashboard',
-        component:DashboardComponent
+        path:'logo',
+        component:LogoComponent
       },
       {
-        path:'',
-        pathMatch:'full',
-        redirectTo:'/admin/employee' 
-      }
+        path:'profil',
+        component:ProfilComponent
+      },
+ 
+ 
     ]
   }
 ]
@@ -35,7 +39,15 @@ const routes: Routes = [
     AdminComponent, 
     EmployeeComponent,
     EmployeeDetailComponent,
-    DashboardComponent,
+    ImageComponent,
+    ProfilComponent,
+    LogoComponent,
+
+
+
+
+
+
     
   ],
   imports: [

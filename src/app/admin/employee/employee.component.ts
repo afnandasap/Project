@@ -22,7 +22,7 @@ export class EmployeeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.title='Karyawan';
+    this.title='Daftar Harga Vektor Art';
     this.auth.user.subscribe(user=>{
       this.userData = user;
       this.getEmployees();
